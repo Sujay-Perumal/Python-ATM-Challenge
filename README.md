@@ -53,9 +53,9 @@ def withdraw(requested_amount, account_balance):
     if not isinstance(requested_amount, int) or requested_amount <= 0:
         return "Error: Invalid withdrawal amount. Must be a positive integer."
     
-    # Assuming the ATM only dispenses multiples of 5
-    if requested_amount % 5 != 0:
-        return "Error: Withdrawal amount must be a multiple of 5."
+    # Assuming the ATM only dispenses multiples of 10
+    if requested_amount % 10 != 0:
+        return "Error: Withdrawal amount must be a multiple of 10."
 
     if requested_amount > account_balance:
         return "Error: Insufficient funds."
